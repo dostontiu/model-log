@@ -31,7 +31,7 @@ abstract class ModelLogService implements ModelLogInterface
         $keys = array_keys($this->before);
         for ($i = 0; $i < count($keys); $i++) {
             if (isset($this->before[$keys[$i]]) && $this->after[$keys[$i]] && $this->before[$keys[$i]] != $this->after[$keys[$i]]) {
-                $message .= ", ".$keys[$i]." => ".$this->before[$keys[$i]]. ' dan '. $this->after[$keys[$i]]. " ga ";
+                $message .= ", ".$keys[$i]." => from ".$this->before[$keys[$i]]. ' to '. $this->after[$keys[$i]];
             }
         }
         return $message." changed";

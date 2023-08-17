@@ -1,0 +1,18 @@
+{
+    "name": "dostontiu/model-log",
+    "description": "Create history log for laravel model",
+    "autoload": {
+        "psr-4": {
+            "Dostontiu\\ModelLog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Doston Ismailov",
+            "email": "dostonberuniy@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    }
+}

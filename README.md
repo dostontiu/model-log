@@ -1,7 +1,7 @@
 # model-log
 Create history log for laravel model
 
-# :package_description
+# Package description
 
 ---
 This package can be used for creating log form model. Follow these steps to get started:
@@ -14,11 +14,13 @@ This package can be used for creating log form model. Follow these steps to get 
 ## Installation
 You should add repository to your composer.json file
 
+:vendor_slug/:package_slug
+
 ```json
 "repositories": [
     {
         "type": "vcs",
-        "url": "https://github.com/:vendor_slug/:package_slug"
+        "url": "https://github.com/dostontiu/model-log"
     }
 ]
 ```
@@ -26,7 +28,7 @@ You should add repository to your composer.json file
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require dostontiu/model-log
 ```
 
 ## Usage

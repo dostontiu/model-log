@@ -1,20 +1,10 @@
 # model-log
-Create history log for laravel model
+Create history log for laravel model. This package can be used for creating log form model.
 
-# Package description
-
----
-This package can be used for creating log form model. Follow these steps to get started:
-
-1. You should run migration
-2. Have fun creating your package.
----
 <!--/delete-->
 
 ## Installation
 You should add repository to your composer.json file
-
-:vendor_slug/:package_slug
 
 ```json
 "repositories": [
@@ -111,20 +101,6 @@ class UserController extends ModelLogService
     }
 }
 ```
-
-## Testing
-
-```bash
-composer test
-```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
 
 ## License
 

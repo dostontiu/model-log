@@ -1,6 +1,6 @@
 <?php
 
-namespace Dostontiu\ModelLog;
+namespace Dostontiu\ModelLog\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

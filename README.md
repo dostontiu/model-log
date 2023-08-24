@@ -21,38 +21,17 @@ You can install the package via composer:
 composer require dostontiu/model-log
 ```
 
-## Usage
+## Configuration
 
-You should run migration
-```php
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
-
-return new class extends Migration
-{
-    public function up()
-    {
-        Schema::create('model_logs', function (Blueprint $table) {
-            $table->id();
-            $table->string('model_name')->nullable();
-            $table->integer('model_id')->nullable();
-            $table->integer('user_id')->nullable();
-            $table->text('message')->nullable();
-            $table->string('ip')->nullable();
-            $table->jsonb('before')->nullable();
-            $table->jsonb('after')->nullable();
-            $table->timestamps();
-        });
-    }
-
-    public function down()
-    {
-        Schema::dropIfExists('model_logs');
-    }
-};
+1. You should publish migration files
+```bash
+php artisan vendor:publish --provider="Dostontiu\ModelLog\ServiceProvider"
 ```
-
+2. Run migration
+```bash
+php artisan migrate
+```
+## Usage
 
 You should crete model log service, and it extends ModelLogService. It contains toArray() method.
 ```php

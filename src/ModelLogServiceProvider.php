@@ -6,7 +6,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider as Provider;
 
-class ServiceProvider extends Provider
+class ModelLogServiceProvider extends Provider
 {
     public function boot()
     {

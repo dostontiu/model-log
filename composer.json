@@ -1,15 +1,20 @@
 {
     "name": "dostontiu/model-log",
     "description": "Create history log for laravel model",
+    "keywords": [
+        "model-logs",
+        "laravel-model-logs"
+    ],
     "autoload": {
         "psr-4": {
-            "Dostontiu\\ModelLog\\": "src/"
+            "Dostontiu\\ModelLog\\": "src"
         }
     },
     "authors": [
         {
             "name": "Doston Ismailov",
-            "email": "dostonberuniy@gmail.com"
+            "email": "dostonberuniy@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -17,5 +22,12 @@
         "illuminate/auth": "^6|^7|^8.67|^9|^10",
         "illuminate/contracts": "^6|^7|^8.67|^9|^10",
         "illuminate/support": "^6|^7|^8.67|^9|^10"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dostotiu\\ModelLog\\ModelLogServiceProvider"
+            ]
+        }
     }
 }

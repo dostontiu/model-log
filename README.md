@@ -25,7 +25,7 @@ composer require dostontiu/model-log
 
 1. You should publish migration files
 ```bash
-php artisan vendor:publish --provider="Dostontiu\ModelLog\ServiceProvider"
+php artisan vendor:publish --provider="Dostontiu\ModelLog\ModelLogServiceProvider"
 ```
 2. Run migration
 ```bash

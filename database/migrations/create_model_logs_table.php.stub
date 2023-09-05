@@ -13,7 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('model_logs', function (Blueprint $table) {
+        $table_name = config('model-log.table_name');
+        Schema::create($table_name, function (Blueprint $table) {
             $table->id();
             $table->string('model_name')->nullable(false)->index();
             $table->integer('model_id')->nullable(false)->index();
@@ -33,6 +34,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('model_logs');
+        $table_name = config('model-log.table_name');
+        Schema::dropIfExists($table_name);
     }
 };

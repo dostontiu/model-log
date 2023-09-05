@@ -3,7 +3,8 @@
     "description": "Create history log for laravel model",
     "keywords": [
         "model-logs",
-        "laravel-model-logs"
+        "laravel-model-logs",
+        "laravel"
     ],
     "autoload": {
         "psr-4": {

@@ -16,8 +16,12 @@ class ModelLogServiceProvider extends Provider
     protected function publish()
     {
         $this->publishes([
+            __DIR__.'/../config/model-log.php' => $this->app->configPath('model-log.php'),
+        ], 'model-log-config');
+
+        $this->publishes([
             __DIR__.'/../database/migrations/create_model_logs_table.php.stub' => $this->migrationFileName('create_model_logs_table.php'),
-        ]);
+        ], 'model-log-migrations');
     }
 
     /**

@@ -14,6 +14,7 @@ abstract class ModelLogService implements ModelLogInterface
     public $model_id;
     public $before;
     public $after;
+    public $hiddenColumns = [];
 
     public function __construct(Model $old_model, Model $new_model)
     {
@@ -28,10 +29,13 @@ abstract class ModelLogService implements ModelLogInterface
     public function makeMessage()
     {
         $message = "Change ";
-        $keys = array_keys($this->before);
-        for ($i = 0; $i < count($keys); $i++) {
-            if (isset($this->before[$keys[$i]]) && $this->after[$keys[$i]] && $this->before[$keys[$i]] != $this->after[$keys[$i]]) {
-                $message .= ", ".$keys[$i]." => from ".$this->before[$keys[$i]]. ' to '. $this->after[$keys[$i]];
+        $array_keys = array_keys($this->before);
+        $change_item = 0;
+        foreach ($array_keys as $key) {
+            if ($this->before[$key] != $this->after[$key] && !in_array($key, $this->hiddenColumns)) {
+                $comma = $change_item > 0 ? ', ' : '';
+                $message .= $comma.$key.' => from '.$this->before[$key].' to '.$this->after[$key];
+                $change_item++;
             }
         }
         return $message." changed";
